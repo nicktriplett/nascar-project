@@ -69,7 +69,7 @@ app.layout = dbc.Container(
             dbc.Col(
                 children=[
                     html.Img(
-                    src=dash.get_asset_url('jgrlogo.png'),
+                    src='/assets/jgrlogo.png',
                     style={
                         'width':'100%',
                         'height':'auto',
