@@ -22,7 +22,7 @@ df = df[1:]
 df = df.reset_index(drop=True)
 df[['Start','Finish','Wins','Top 5s','Top 10s','DNFs','Laps Led','Points','Playoff Points Earned','Laps Completed']] = df[['Start','Finish','Wins','Top 5s','Top 10s','DNFs','Laps Led','Points','Playoff Points Earned','Laps Completed']].apply(pd.to_numeric, errors='coerce').astype('Int64')
 
-displayed_df = df[['Driver Full Name', 'Race ID', 'Track Name', 'Season','Race', 'Wins', 'Top 5s', 'Top 10s', 'DNFs','Points','Finish']].copy()
+displayed_df = df[['Driver Full Name', 'Race ID', 'Track Name', 'Season','Race','Start','Finish','Interval', 'Wins', 'Top 5s', 'Top 10s', 'DNFs','Points']].copy()
 first_round_average_figures = displayed_df
 
 custom_driver_order = ['Christopher Bell','Ryan Blaney','Alex Bowman','Chase Briscoe','Harrison Burton','William Byron','Austin Cindric','Chase Elliott','Ty Gibbs','Denny Hamlin','Brad Keselowski','Kyle Larson','Joey Logano','Tyler Reddick','Daniel Suárez','Martin Truex Jr']
@@ -124,7 +124,7 @@ app.layout = dbc.Container(
                 children=[
                     dash_table.DataTable(
                         id='datatable-interactivity',
-                        columns=[{"name": i, "id": i, "deletable": False} for i in displayed_df.columns if i not in ['Driver Full Name', 'Race ID','Track Name','Finish']], 
+                        columns=[{"name": i, "id": i, "deletable": False} for i in displayed_df.columns if i not in ['Driver Full Name', 'Race ID','Track Name','Wins','Top 5s','Top 10s','DNFs']], 
                         data=displayed_df.to_dict('records'),
                         sort_action="native",
                         sort_mode="multi",
@@ -134,7 +134,7 @@ app.layout = dbc.Container(
                         style_cell={'textAlign': 'center','backgroundColor': 'white','color': '#000','padding': '10px','border': '1px solid black',},
                         style_header={'backgroundColor': 'black','fontWeight': 'bold','color': 'white','textAlign': 'center'},
                         style_data_conditional=[{'if': {'row_index': 'odd'},'backgroundColor': 'lightgrey',},{'if': {'row_index': 'even'},'backgroundColor': 'white'}],
-                        style_table={'height': '250px','margin-left':'30px'}
+                        style_table={'height': '250px','margin-left':'45px'}
                     ),
                 ],
                 width=5,
