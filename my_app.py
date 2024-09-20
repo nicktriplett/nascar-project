@@ -50,7 +50,7 @@ app.layout = dbc.Container(
             dbc.Col(
                 children=[
                     html.Img(
-                    src='/assets/nascarplayoffslogo.png',
+                    src='https://raw.githubusercontent.com/nicktriplett/jgr-performance-project/main/assets/nascarplayoffslogo.png',
                     style={
                         'width':'100%',
                         'height':'auto',
@@ -69,7 +69,7 @@ app.layout = dbc.Container(
             dbc.Col(
                 children=[
                     html.Img(
-                    src='/assets/jgrlogo.png',
+                    src='https://raw.githubusercontent.com/nicktriplett/jgr-performance-project/main/assets/jgrlogo.png',
                     style={
                         'width':'100%',
                         'height':'auto',
