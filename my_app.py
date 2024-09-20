@@ -50,7 +50,7 @@ app.layout = dbc.Container(
             dbc.Col(
                 children=[
                     html.Img(
-                    src=dash.get_asset_url('nascarplayoffslogo.png'),
+                    src='/assets/nascarplayoffslogo.png',
                     style={
                         'width':'100%',
                         'height':'auto',
