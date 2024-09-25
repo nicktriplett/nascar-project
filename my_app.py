@@ -1,4 +1,4 @@
-# JGR Project Results
+# JGR Project Results (UPDATED)
 # Nicholas Triplett
 
 import os
@@ -23,13 +23,13 @@ df = df.reset_index(drop=True)
 df[['Start','Finish','Wins','Top 5s','Top 10s','DNFs','Laps Led','Points','Playoff Points Earned','Laps Completed']] = df[['Start','Finish','Wins','Top 5s','Top 10s','DNFs','Laps Led','Points','Playoff Points Earned','Laps Completed']].apply(pd.to_numeric, errors='coerce').astype('Int64')
 
 displayed_df = df[['Driver Full Name', 'Race ID', 'Track Name', 'Season','Race','Start','Finish','Interval', 'Wins', 'Top 5s', 'Top 10s', 'DNFs','Points']].copy()
-first_round_average_figures = displayed_df
+second_round_average_figures = displayed_df
 
-custom_driver_order = ['Christopher Bell','Ryan Blaney','Alex Bowman','Chase Briscoe','Harrison Burton','William Byron','Austin Cindric','Chase Elliott','Ty Gibbs','Denny Hamlin','Brad Keselowski','Kyle Larson','Joey Logano','Tyler Reddick','Daniel Suárez','Martin Truex Jr']
-custom_track_order = ['Atlanta Motor Speedway','Bristol Motor Speedway','Watkins Glen International']
+custom_driver_order = ['Christopher Bell','Ryan Blaney','Alex Bowman','Chase Briscoe','William Byron','Austin Cindric','Chase Elliott','Denny Hamlin','Kyle Larson','Joey Logano','Tyler Reddick','Daniel Suárez']
+custom_track_order = ['Kansas Speedway','Talladega Superspeedway','Charlotte Motor Speedway Road Course']
 
 driver_options = [{'label': driver, 'value': driver} for driver in custom_driver_order if driver in displayed_df['Driver Full Name'].unique()]
-driver_options = [{'label': driver, 'value': driver} for driver in custom_driver_order if driver in  first_round_average_figures['Driver Full Name'].unique()]
+driver_options = [{'label': driver, 'value': driver} for driver in custom_driver_order if driver in  second_round_average_figures['Driver Full Name'].unique()]
 track_options = [{'label': track, 'value': track} for track in custom_track_order if track in displayed_df['Track Name'].unique()]
 
 X = df[['Race ID']]
@@ -110,7 +110,7 @@ app.layout = dbc.Container(
                     dcc.Dropdown(
                         id='race-dropdown',
                         options=track_options,
-                        value='Atlanta Motor Speedway',
+                        value='Kansas Speedway',
                         clearable=False,
                         className='mb-5 mt-0',
                     )
@@ -241,7 +241,7 @@ app.layout = dbc.Container(
         dbc.Row([
             dbc.Col(
                 children=[
-                    html.P('Average First Round Track Finish',className='fs-5 text-center mb-0 mt-3')
+                    html.P('Average Second Round Track Finish',className='fs-5 text-center mb-0 mt-3')
                 ],
                 width=3
             ),
@@ -363,20 +363,16 @@ def results(selected_driver,selected_track):
         color_discrete_map={
             "Alex Bowman":'#50104a',
             "Austin Cindric":'black',
-            "Brad Keselowski":'#009343',
             "Chase Briscoe":'#720000',
             "Chase Elliott":'#001489',
             "Kyle Larson":'#023ca6',
             "Christopher Bell":'#febd17',
-            "Daniel Suárez":'#ed80e9',
+            "Daniel Suárez":'#ff7f00',
             "Denny Hamlin":'#4d148c',
-            "Harrison Burton":'red',
             "Joey Logano":'#ffd500',
-            "Martin Truex Jr":'#ff5b00',
             "Ryan Blaney":'#FEEF01',
-            "Tyler Reddick":'#DA291C',
+            "Tyler Reddick":'#95d600',
             "William Byron":'#002d62',
-            "Ty Gibbs":'#95D600',
         },
     )
 
