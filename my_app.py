@@ -196,7 +196,8 @@ app.layout = dbc.Container(
             ),
             dbc.Col(
                 children=[
-                    html.P('NOTE: Hovering over points on the area chart above highlight what season and race is associated with each point.',className='fs-5 text-center mb-0 mt-3 mx-2')
+                    html.P('NOTE: Hovering over points on the area chart above highlight what season and race is associated with each point.',className='fs-5 text-center mb-0 mt-3 mx-2'),
+                    style={'marginTop': '30px'},
                 ]
             )
         ]),
