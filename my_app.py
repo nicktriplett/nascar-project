@@ -69,13 +69,12 @@ app.layout = dbc.Container(
             dbc.Col(
                 children=[
                     html.Img(
-                    src='https://raw.githubusercontent.com/nicktriplett/jgr-performance-project/main/assets/jgrlogo.png',
+                    src='https://raw.githubusercontent.com/nicktriplett/jgr-performance-project/main/assets/nascarplayoffslogo.png',
                     style={
                         'width':'100%',
                         'height':'auto',
                         'vertical-align':'top',
                         'object-fit':'contain',
-                        'margin-top':'-6px',
                         }
                     )
                 ],
