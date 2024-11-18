@@ -62,7 +62,7 @@ app.layout = dbc.Container(
             ),
             dbc.Col(
                 children=[
-                    html.H3('Nicholas Triplett - Joe Gibbs Racing Performance Project',className='text-center mt-4'),
+                    html.H3('Nicholas Triplett - NASCAR Second Round Performance Project',className='text-center mt-4'),
                 ],
                 width={'size': 8}
                 ),
@@ -241,7 +241,7 @@ app.layout = dbc.Container(
         dbc.Row([
             dbc.Col(
                 children=[
-                    html.P('Average Second Round Track Finish',className='fs-5 text-center mb-0 mt-3')
+                    html.P('Average Three Track Finish',className='fs-5 text-center mb-0 mt-3')
                 ],
                 width=3
             ),
