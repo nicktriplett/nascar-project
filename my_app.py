@@ -96,7 +96,7 @@ app.layout = dbc.Container(
                     dcc.Dropdown(
                         id='driver-dropdown',
                         options=driver_options,
-                        value='Denny Hamlin',
+                        value='Joey Logano',
                         clearable=False,
                         className='mb-3 mt-0',
                     )
