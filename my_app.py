@@ -134,7 +134,7 @@ app.layout = dbc.Container(
                         style_cell={'textAlign': 'center','backgroundColor': 'white','color': '#000','padding': '10px','border': '1px solid black',},
                         style_header={'backgroundColor': 'black','fontWeight': 'bold','color': 'white','textAlign': 'center'},
                         style_data_conditional=[{'if': {'row_index': 'odd'},'backgroundColor': 'lightgrey',},{'if': {'row_index': 'even'},'backgroundColor': 'white'}],
-                        style_table={'height': '250px','margin-left':'6px'}
+                        style_table={'height': '250px','margin-left':'4px'}
                     ),
                 ],
                 width=5,
