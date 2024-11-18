@@ -1,4 +1,4 @@
-# JGR Project Results (UPDATED)
+# NASCAR Project
 # Nicholas Triplett
 
 import os
@@ -42,7 +42,7 @@ model.fit(X_train, y_train)
 
 app = Dash(external_stylesheets=[dbc.themes.FLATLY])
 server = app.server
-app.title = "Nicholas Triplett JGR Project"
+app.title = "Nicholas Triplett NASCAR Project"
 
 app.layout = dbc.Container(
     children=[
@@ -50,7 +50,7 @@ app.layout = dbc.Container(
             dbc.Col(
                 children=[
                     html.Img(
-                    src='https://raw.githubusercontent.com/nicktriplett/jgr-performance-project/main/assets/nascarplayoffslogo.png',
+                    src='https://raw.githubusercontent.com/nicktriplett/nascar-project/main/assets/nascarplayoffslogo.png',
                     style={
                         'width':'100%',
                         'height':'auto',
@@ -62,14 +62,14 @@ app.layout = dbc.Container(
             ),
             dbc.Col(
                 children=[
-                    html.H3('Nicholas Triplett - NASCAR Second Round Performance Project',className='text-center mt-4'),
+                    html.H3('NASCAR Second Round Performance Project - Nick Triplett',className='text-center mt-4'),
                 ],
                 width={'size': 8}
                 ),
             dbc.Col(
                 children=[
                     html.Img(
-                    src='https://raw.githubusercontent.com/nicktriplett/jgr-performance-project/main/assets/nascarplayoffslogo.png',
+                    src='https://raw.githubusercontent.com/nicktriplett/nascar-project/main/assets/nascarplayoffslogo.png',
                     style={
                         'width':'100%',
                         'height':'auto',
