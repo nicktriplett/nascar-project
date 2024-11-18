@@ -42,7 +42,7 @@ model.fit(X_train, y_train)
 
 app = Dash(external_stylesheets=[dbc.themes.FLATLY])
 server = app.server
-app.title = "Nicholas Triplett NASCAR Project"
+app.title = "NASCAR Second Round Perofmrnace Project - Nick Triplett"
 
 app.layout = dbc.Container(
     children=[
@@ -124,7 +124,7 @@ app.layout = dbc.Container(
                 children=[
                     dash_table.DataTable(
                         id='datatable-interactivity',
-                        columns=[{"name": i, "id": i, "deletable": False} for i in displayed_df.columns if i not in ['Driver Full Name', 'Race ID','Track Name','Wins','Top 5s','Top 10s','DNFs']], 
+                        columns=[{"name": i, "id": i, "deletable": False} for i in displayed_df.columns if i not in ['Driver Full Name','Track Name','Wins','Top 5s','Top 10s','DNFs']], 
                         data=displayed_df.to_dict('records'),
                         sort_action="native",
                         sort_mode="multi",
@@ -134,7 +134,7 @@ app.layout = dbc.Container(
                         style_cell={'textAlign': 'center','backgroundColor': 'white','color': '#000','padding': '10px','border': '1px solid black',},
                         style_header={'backgroundColor': 'black','fontWeight': 'bold','color': 'white','textAlign': 'center'},
                         style_data_conditional=[{'if': {'row_index': 'odd'},'backgroundColor': 'lightgrey',},{'if': {'row_index': 'even'},'backgroundColor': 'white'}],
-                        style_table={'height': '250px','margin-left':'45px'}
+                        style_table={'height': '250px','margin-left':'8px'}
                     ),
                 ],
                 width=5,
