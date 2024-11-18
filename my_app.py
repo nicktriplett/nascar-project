@@ -42,7 +42,7 @@ model.fit(X_train, y_train)
 
 app = Dash(external_stylesheets=[dbc.themes.FLATLY])
 server = app.server
-app.title = "NASCAR Second Round Perofmrnace Project - Nick Triplett"
+app.title = "Triplett NASCAR Project"
 
 app.layout = dbc.Container(
     children=[
