@@ -62,7 +62,7 @@ app.layout = dbc.Container(
             ),
             dbc.Col(
                 children=[
-                    html.H3('NASCAR Second Round Performance Project - Nick Triplett',className='text-center mt-4'),
+                    html.H3('NASCAR Playoffs Performance Project - Second Round',className='text-center mt-4'),
                 ],
                 style={'marginTop': '15px'},
                 width={'size': 8}
